@@ -1,7 +1,10 @@
-public class Lv_0_두수의차 {
+package day1;
+
+public class Lv_0_두수의곱 {
     public int solution(int num1, int num2) {
         int answer = 0;
-        answer = num1 - num2;
+
+        answer = num1 * num2;
         return answer;
     }
 }
