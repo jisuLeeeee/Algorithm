@@ -1,4 +1,4 @@
-package day30;
+package Lv_1.day30;
 
 public class Lv_1_Number_Of_P_and_Y_inString {
     boolean solution(String s) {

@@ -1,4 +1,4 @@
-package day30;
+package Lv_1.day30;
 
 public class Lv_1_Sum_Of_Divisor {
     public int solution(int n) {

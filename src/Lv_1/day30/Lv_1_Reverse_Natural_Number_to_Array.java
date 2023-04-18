@@ -1,4 +1,4 @@
-package day30;
+package Lv_1.day30;
 
 public class Lv_1_Reverse_Natural_Number_to_Array {
     public int[] solution(long n) {
