@@ -1,4 +1,4 @@
-package Lv_1.day40;
+package Lv_2.day40;
 
 public class Maximum_and_Minimum_Values {
     public String solution(String s) {
