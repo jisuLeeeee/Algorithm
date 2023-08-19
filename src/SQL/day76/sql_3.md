@@ -1,0 +1,34 @@
+# Day76
+
+---
+
+### <2023-08-15>
+
+> **SQL 문제풀이**
+>
+- SUM, MAX, MIN, COUNT, DISTINCT
+
+    ```sql
+    -- 가격이 가장 비싼 제품 정보 출력
+    SELECT * FROM FOOD_PRODUCT WHERE PRICE = (SELECT MAX(PRICE) FROM FOOD_PRODUCT);
+    -- 가장 비싼 상품의 가격 출력
+    SELECT MAX(PRICE) AS MAX_PRICE FROM PRODUCT;
+    -- 최근 들어온 동물과 들어온지 가장 오래된 동물(최댓값, 최솟값)
+    SELECT MAX(DATETIME) FROM ANIMAL_INS;
+    SELECT MIN(DATETIME) FROM ANIMAL_INS;
+    -- 테이블 데이터 갯수(행) 가져오기
+    SELECT COUNT(*) FROM ANIMAL_INS;
+    -- 이름 중복 제거(NULL도 제거)
+    SELECT COUNT(DISTINCT NAME) FROM ANIMAL_INS
+    WHERE NAME IS NOT NULL;
+    ```
+
+- GROUP BY
+
+    ```sql
+    -- 즐겨찾기가 가장 많은 식당 정보 출력
+    SELECT FOOD_TYPE, REST_ID, REST_NAME, FAVORITES FROM REST_INFO
+    WHERE (FOOD_TYPE, FAVORITES) IN (SELECT FOOD_TYPE, MAX(FAVORITES) FROM REST_INFO
+    GROUP BY FOOD_TYPE)
+    ORDER BY FOOD_TYPE DESC;
+    ```
